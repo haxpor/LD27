@@ -137,7 +137,7 @@ GameObject:
   - 4: {fileID: 172866961}
   - 114: {fileID: 172866960}
   m_Layer: 0
-  m_Name: StartButton
+  m_Name: TitleGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,6 +154,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e8fe63caef8f64d8e4b71cbebe97b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customButtonStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 2800000, guid: 741e6a9fad7f38d4c981e801ccc01f8a, type: 3}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 2800000, guid: 741e6a9fad7f38d4c981e801ccc01f8a, type: 3}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 2800000, guid: 6a96220d21d5cbb4eb15cb9c11e4f2e2, type: 3}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 2800000, guid: 741e6a9fad7f38d4c981e801ccc01f8a, type: 3}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 0
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 512
+    m_FixedHeight: 256
+    m_StretchWidth: 1
+    m_StretchHeight: 1
 --- !u!4 &172866961
 Transform:
   m_ObjectHideFlags: 0
@@ -1270,7 +1329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!132 &1092358128
 GUIText:
   m_ObjectHideFlags: 0
