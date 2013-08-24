@@ -4,7 +4,6 @@ using System.Collections;
 public class CountDownTimer : MonoBehaviour {
 	
 	public float timeRemaining = 10.0f;
-	public MeshRenderer plain;
 
 	// Use this for initialization
 	void Start () {
@@ -15,10 +14,6 @@ public class CountDownTimer : MonoBehaviour {
 	void Update () {
 		if(timeRemaining > 0.0f)
 			timeRemaining -= Time.deltaTime;
-		
-		// debugging
-		if(timeRemaining <= 0.0f)
-			plain.material.color = Color.red;
 	}
 	
 	void ResetTimer() {
