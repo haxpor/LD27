@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e8fe63caef8f64d8e4b71cbebe97b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  titleTex: {fileID: 2800000, guid: b162e70ab4599a5498e10e384166ce91, type: 3}
   customButtonStyle:
     m_Name: 
     m_Normal:
