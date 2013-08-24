@@ -58,7 +58,8 @@ public class ObjectPool : MonoBehaviour {
     }
  
     // Use this for initialization
-    void Start()
+	// changed from Start to Awake as pool is need before Start is called on other behaviours
+    void Awake()
     {
         ContainerObject = new GameObject("ObjectPool");
  
