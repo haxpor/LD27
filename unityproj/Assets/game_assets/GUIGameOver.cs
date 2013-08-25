@@ -24,6 +24,23 @@ public class GUIGameOver : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	}
+    //void Update () {
+    //}
+
+    public GUIStyle retryLevelStyle;
+    public GUIStyle titleStyle;
+    void OnGUI()
+    {
+        float y = Screen.height / 2 + 70;
+        if (GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "Retry Level", retryLevelStyle))
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+
+        y += 50 + 5;
+        if (GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "Title", titleStyle))
+        {
+            Application.LoadLevel(0);
+        }
+    }
 }

@@ -37,7 +37,30 @@ public class GUIGameWin : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+    //void Update () {
 	
-	}
+    //}
+
+
+    public GUIStyle nextLevelStyle;
+    public GUIStyle titleStyle;
+    void OnGUI()
+    {
+        // you can change button to image.
+        // check title_assets/StartButton.cs
+
+
+        float y = Screen.height / 2 + 70;
+        if (Application.loadedLevel < Application.levelCount-1 &&
+            GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "Next Level", nextLevelStyle))
+        {
+            Application.LoadLevel(Application.loadedLevel + 1);
+        }
+
+        y+= 50 + 5;
+        if( GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "Title", titleStyle))
+        {
+            Application.LoadLevel(0);
+        }
+    }
 }
