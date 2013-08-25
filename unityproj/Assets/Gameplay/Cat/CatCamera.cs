@@ -11,8 +11,9 @@ public class CatCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// make the camera a little bit above the cat
-		camera.position = new Vector3(camera.position.x, transform.position.y + 10, transform.position.z);
-		camera.position = Vector3.Lerp(camera.position, transform.position, 0.65f);
+		// lerp individual position
+		// y
+		float y = Mathf.Lerp(camera.position.y + 10, transform.position.y, 0.65f);
+		camera.position = new Vector3(camera.position.x, y, transform.position.z);;
 	}
 }
