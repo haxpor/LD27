@@ -44,7 +44,7 @@ MonoBehaviour:
     Count: 50
     pool: []
     objectsInPool: 0
-  - Prefab: {fileID: 100000, guid: ed0db6a1b5659d947bf390d08f0356da, type: 2}
+  - Prefab: {fileID: 100000, guid: f9fa8d71ae280ee48acd6a8aceb95647, type: 2}
     Count: 50
     pool: []
     objectsInPool: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstaclePrefabs:
   - {fileID: 100000, guid: 526cd029deccfee4fba2acd5772d78e1, type: 2}
-  - {fileID: 100000, guid: ed0db6a1b5659d947bf390d08f0356da, type: 2}
+  - {fileID: 100000, guid: f9fa8d71ae280ee48acd6a8aceb95647, type: 2}
   ObstacleSpawnPercentages:
   - .300000012
   - .699999988
