@@ -123,7 +123,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -381,6 +381,18 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 83111143}
+    - target: {fileID: 11400000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
+      propertyPath: ghostTrickActiveDuration
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
+      propertyPath: numberOfGhostTrickUsed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
+      propertyPath: ghostTrickSlowTimeScale
+      value: .200000003
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
   m_RootGameObject: {fileID: 1107223583}
@@ -422,6 +434,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a2aed2d934a4b78aa9ca9f7703a6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghostTrickSlowTimeScale: .200000003
+  ghostTrickActiveDuration: .200000003
+  numberOfGhostTrickUsed: 10
 --- !u!54 &1090648391
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -784,6 +799,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -51.2416687
@@ -810,6 +829,62 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnHalfWidth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.data[2]
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.data[3]
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.data[4]
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.data[5]
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.data[6]
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.data[7]
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.data[8]
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: ObstacleSpawnPercentages.Array.data[9]
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnDistanceMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnDistanceMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnFinalMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnHalfHeight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnFinalMin
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -903,13 +978,13 @@ MonoBehaviour:
   ObstacleSpawnPercentages:
   - .300000012
   - .699999988
-  spawnDistanceMin: 20
-  spawnDistanceMax: 30
+  spawnDistanceMin: 1
+  spawnDistanceMax: 5
   spawnDistanceReducer: 1
-  spawnFinalMin: 10
+  spawnFinalMin: 1
   spawnFinalMax: 20
-  spawnHalfWidth: 30
-  spawnHalfHeight: 30
+  spawnHalfWidth: 50
+  spawnHalfHeight: 20
   levelDistance: 490
 --- !u!114 &1632634723
 MonoBehaviour:
