@@ -7,7 +7,7 @@ public class MovementControl : MonoBehaviour {
 	//			 |
 	//			 |
 	//			 |
-	// +x---------
+	// -x---------
 	// for each key press and movement
 	
 	public Rigidbody cat;
@@ -24,22 +24,22 @@ public class MovementControl : MonoBehaviour {
 		if(Input.GetButton("Left"))
 		{
 			// add force
-			cat.AddForce(-cat.transform.right * xAxisForce, ForceMode.Force);
+			cat.AddForce(new Vector3(-1.0f, 0.0f, 0.0f) * xAxisForce, ForceMode.Force);
 		}
 		if(Input.GetButton("Right"))
 		{
 			// add force
-			cat.AddForce(cat.transform.right * xAxisForce, ForceMode.Force);
+			cat.AddForce(new Vector3(1.0f, 0.0f, 0.0f) * xAxisForce, ForceMode.Force);
 		}
 		if(Input.GetButton("Up"))
 		{
 			// add force
-			cat.AddForce(cat.transform.forward * zAxisForce, ForceMode.Force);
+			cat.AddForce(new Vector3(0.0f, 0.0f, 1.0f) * zAxisForce, ForceMode.Force);
 		}
 		if(Input.GetButton("Down"))
 		{
 			// add force
-			cat.AddForce(-cat.transform.forward * zAxisForce, ForceMode.Force);
+			cat.AddForce(new Vector3(0.0f, 0.0f, -1.0f) * zAxisForce, ForceMode.Force);
 		}
 	}
 }
