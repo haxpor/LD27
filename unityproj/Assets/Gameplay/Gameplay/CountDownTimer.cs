@@ -7,7 +7,6 @@ public class CountDownTimer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -18,5 +17,9 @@ public class CountDownTimer : MonoBehaviour {
 	
 	void ResetTimer() {
 		timeRemaining = 0.0f;
+	}
+	
+	public float GetTimeRemaining() {
+		return timeRemaining;
 	}
 }

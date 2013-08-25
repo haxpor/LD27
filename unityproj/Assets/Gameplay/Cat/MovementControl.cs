@@ -12,8 +12,8 @@ public class MovementControl : MonoBehaviour {
 	
 	public Rigidbody cat;
 	
-	public float xAxisForce = 100.0f;
-	public float zAxisForce = 100.0f;
+	public float xAxisForce = 500.0f;
+	public float zAxisForce = 500.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -21,25 +21,25 @@ public class MovementControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonDown("Left"))
+		if(Input.GetButton("Left"))
 		{
 			// add force
-			cat.AddForce(-cat.transform.right * xAxisForce, ForceMode.Impulse);
+			cat.AddForce(-cat.transform.right * xAxisForce, ForceMode.Force);
 		}
-		if(Input.GetButtonDown("Right"))
+		if(Input.GetButton("Right"))
 		{
 			// add force
-			cat.AddForce(cat.transform.right * xAxisForce, ForceMode.Impulse);
+			cat.AddForce(cat.transform.right * xAxisForce, ForceMode.Force);
 		}
-		if(Input.GetButtonDown("Up"))
+		if(Input.GetButton("Up"))
 		{
 			// add force
-			cat.AddForce(cat.transform.forward * zAxisForce, ForceMode.Impulse);
+			cat.AddForce(cat.transform.forward * zAxisForce, ForceMode.Force);
 		}
-		if(Input.GetButtonDown("Down"))
+		if(Input.GetButton("Down"))
 		{
 			// add force
-			cat.AddForce(-cat.transform.forward * zAxisForce, ForceMode.Impulse);
+			cat.AddForce(-cat.transform.forward * zAxisForce, ForceMode.Force);
 		}
 	}
 }
