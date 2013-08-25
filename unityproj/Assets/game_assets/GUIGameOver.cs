@@ -15,7 +15,7 @@ public class GUIGameOver : MonoBehaviour {
         gameObject.transform.localRotation = new Quaternion();
         gameObject.transform.localScale = new Vector3(scaleVal1, scaleVal1, scaleVal1);
         
-        iTween.MoveTo(gameObject, iTween.Hash("y", 0, "time", 3));
+        iTween.MoveTo(gameObject, iTween.Hash("y", 0, "time", 3, "islocal", true));
 
         iTween.ScaleTo(gameObject, iTween.Hash("scale", new Vector3(scaleValPulse, scaleValPulse, scaleValPulse),
             "time", scaleTimePulse,
