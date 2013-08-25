@@ -77,7 +77,7 @@ public class ObstacleManager : MonoBehaviour {
 			Debug.Log("spawned obstacle at "+y);
 			
 			obstacleGob.BroadcastMessage("ObstacleSpawned", null, SendMessageOptions.DontRequireReceiver);
-			obstacleGob.transform.localRotation = Quaternion.identity;
+			//obstacleGob.transform.localRotation = Quaternion.identity;
 			// obstacleGob.transform.localScale = Vector3(1,1,1);
 			obstacleGob.transform.localPosition = new Vector3(
 				Random.Range(-spawnHalfWidth, spawnHalfWidth),
