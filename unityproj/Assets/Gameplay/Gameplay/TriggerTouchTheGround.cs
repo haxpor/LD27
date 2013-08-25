@@ -12,6 +12,9 @@ public class TriggerTouchTheGround : MonoBehaviour {
 		
 		// set cat touched the ground
 		isCatTouchedTheGround = true;
+		
+		// play the cat's animation "YAY"
+		GameObject.Find("Nien").animation.Play("Section_Complete");
 	}
 	
 	// Get weather the cat touched the ground already
