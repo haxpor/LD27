@@ -5,9 +5,11 @@ public class CountDownTimer : MonoBehaviour {
 	
 	public float timeRemaining = 10.0f;
 
+    public static CountDownTimer instance;
+
 	// Use this for initialization
 	void Start () {
-	
+        instance = this;
 	}
 	
 	// Update is called once per frame
