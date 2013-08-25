@@ -5,10 +5,13 @@ public class GameOverChecker : MonoBehaviour {
 	public MeshRenderer cat;
 	
 	public GameObject triggerTouchTheGround;
+    public Transform gameLosePrefab;
+    public Transform gameWinPrefab;
+    
 	
 	private TriggerTouchTheGround refTriggerTouchTheGround;
 
-	void Start() {
+    void Start() {
 		// get the reference game objects
 		refTriggerTouchTheGround = (TriggerTouchTheGround)triggerTouchTheGround.GetComponent("TriggerTouchTheGround");
 	}
@@ -20,14 +23,18 @@ public class GameOverChecker : MonoBehaviour {
 			Debug.Log ("Game Over!!");
 			cat.material.color = Color.yellow;
 			
-			// TODO: Add indicator for GAMEOVER HERE ...
+			// Send message for GAMEOVER
+            //gameObject.BroadcastMessage("Lose", SendMessageOptions.DontRequireReceiver);
+            Instantiate(gameLosePrefab);
 		}
 		else if(CountDownTimer.instance.GetTimeRemaining() > 0.0f && refTriggerTouchTheGround.GetIsCatTouchedTheGround())
 		{
 			Debug.Log ("Win!!");
 			cat.material.color = Color.green;
 			
-			// TODO: Add indicator for WINNING stage here ...
+			// Send message for WINNING 
+            //gameObject.BroadcastMessage("Win", SendMessageOptions.DontRequireReceiver);
+            Instantiate(gameWinPrefab);
 		}
 	}
 }

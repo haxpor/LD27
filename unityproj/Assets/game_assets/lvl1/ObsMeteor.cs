@@ -15,7 +15,9 @@ public class ObsMeteor : MonoBehaviour {
         gameObject.transform.Translate(0, -speed * Time.deltaTime, 0, Space.World);
         if (gameObject.transform.position.y <= -50)
         {
-            ObjectPool.instance.PoolObject(gameObject);
+            gameObject.SetActive(false);
+            if(ObjectPool.instance)
+                ObjectPool.instance.PoolObject(gameObject);
         }
 	}
 }
