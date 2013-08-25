@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TriggerTouchTheGround : MonoBehaviour {
 	public MeshRenderer plane;
-	public GameObject gameOverChecker;
+	public GameObject nien;
 	
 	private bool isCatTouchedTheGround = false;
 
@@ -12,6 +12,9 @@ public class TriggerTouchTheGround : MonoBehaviour {
 		
 		// set cat touched the ground
 		isCatTouchedTheGround = true;
+		
+		// play the cat's animation "YAY"
+		nien.animation.Play("Section_Complete");
 	}
 	
 	// Get weather the cat touched the ground already
