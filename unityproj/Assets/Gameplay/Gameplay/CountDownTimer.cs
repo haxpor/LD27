@@ -14,8 +14,10 @@ public class CountDownTimer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(timeRemaining > 0.0f)
-			timeRemaining -= Time.deltaTime;
+        if (timeRemaining > 0.0f)
+            timeRemaining -= Time.deltaTime;
+        else
+            timeRemaining = 0.0f;
 	}
 	
 	void ResetTimer() {
