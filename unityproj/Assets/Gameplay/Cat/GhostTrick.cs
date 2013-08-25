@@ -14,28 +14,28 @@ public class GhostTrick : MonoBehaviour {
             Time.timeScale = 0.2f;
             // If you lower timeScale it is recommended to also lower Time.fixedDeltaTime by the same amount.
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
-            gameObject.BroadcastMessage("GhostTrickOn");
+            gameObject.BroadcastMessage("GhostTrickOn", SendMessageOptions.DontRequireReceiver);
 		}
         else if (Input.GetButtonUp("GhostTrick"))
         {
             Time.timeScale = 1.0f;
             // If you lower timeScale it is recommended to also lower Time.fixedDeltaTime by the same amount.
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
-            gameObject.BroadcastMessage("GhostTrickOff");
+            gameObject.BroadcastMessage("GhostTrickOff", SendMessageOptions.DontRequireReceiver);
         }
 		else if(Input.GetButtonDown("SpeedUp"))
 		{
             Time.timeScale = 3.0f;
             // If you lower timeScale it is recommended to also lower Time.fixedDeltaTime by the same amount.
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
-            gameObject.BroadcastMessage("SpeedUpOn");
+            gameObject.BroadcastMessage("SpeedUpOn", SendMessageOptions.DontRequireReceiver);
 		}
         else if (Input.GetButtonUp("SpeedUp"))
         {
             Time.timeScale = 1.0f;
             // If you lower timeScale it is recommended to also lower Time.fixedDeltaTime by the same amount.
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
-            gameObject.BroadcastMessage("SpeedUpOff");
+            gameObject.BroadcastMessage("SpeedUpOff", SendMessageOptions.DontRequireReceiver);
         }
 		
 	}

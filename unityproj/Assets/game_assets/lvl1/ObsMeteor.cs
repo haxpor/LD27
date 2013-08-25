@@ -13,5 +13,9 @@ public class ObsMeteor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         gameObject.transform.Translate(0, -speed * Time.timeScale, 0, Space.World);
+        if (gameObject.transform.position.y <= -50)
+        {
+            ObjectPool.instance.PoolObject(gameObject);
+        }
 	}
 }

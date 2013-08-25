@@ -5,7 +5,7 @@ public class CountDownTimer : MonoBehaviour {
 	
 	public float timeRemaining = 10.0f;
 
-    public static CountDownTimer instance;
+    public static CountDownTimer instance { get; private set; }
 
 	// Use this for initialization
 	void Start () {
