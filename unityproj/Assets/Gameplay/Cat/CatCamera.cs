@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CatCamera : MonoBehaviour {
 	
-	public Transform catTransform;
+	public Transform camera;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +12,7 @@ public class CatCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// make the camera a little bit above the cat
-		transform.position = new Vector3(catTransform.position.x, catTransform.position.y + 10, catTransform.position.z);
-		transform.position = Vector3.Lerp(transform.position, catTransform.position, 0.65f);
+		camera.position = new Vector3(camera.position.x, transform.position.y + 10, transform.position.z);
+		camera.position = Vector3.Lerp(camera.position, transform.position, 0.65f);
 	}
 }
