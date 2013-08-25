@@ -22,5 +22,12 @@ public class GameOverChecker : MonoBehaviour {
 			
 			// TODO: Add indicator for GAMEOVER HERE ...
 		}
+		else if(CountDownTimer.instance.GetTimeRemaining() > 0.0f && refTriggerTouchTheGround.GetIsCatTouchedTheGround())
+		{
+			Debug.Log ("Win!!");
+			cat.material.color = Color.green;
+			
+			// TODO: Add indicator for WINNING stage here ...
+		}
 	}
 }
