@@ -7,7 +7,8 @@ public class ObsMeteor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        Debug.Log("Child" + gameObject.transform.GetChild(0).name);
+        gameObject.transform.GetChild(0).transform.rotation = Random.rotation;
 	}
 	
 	// Update is called once per frame
