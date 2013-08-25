@@ -1018,6 +1018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cat: {fileID: 1090648392}
   triggerTouchTheGround: {fileID: 2094708671}
+  gameLosePrefab: {fileID: 400000, guid: 5c04cdda4f2a30443909614813877665, type: 2}
+  gameWinPrefab: {fileID: 400002, guid: e5cba655d85aea3459adaf21ded55e0b, type: 2}
 --- !u!114 &1120942346
 MonoBehaviour:
   m_ObjectHideFlags: 0
