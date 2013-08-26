@@ -22,21 +22,25 @@ public class MovementControl : MonoBehaviour {
 		{
 			if(Input.GetButton("Left"))
 			{
+				AudioPlayer.instance.PlayRandomMoveSfx();
 				// add force
 				iTween.MoveBy(gameObject, iTween.Hash("x", -2, "time", 0.35));
 			}
 			if(Input.GetButton("Right"))
 			{
+				AudioPlayer.instance.PlayRandomMoveSfx();
 				// add force
 				iTween.MoveBy(gameObject, iTween.Hash("x", 2, "time", 0.35));
 			}
 			if(Input.GetButton("Up"))
 			{
+				AudioPlayer.instance.PlayRandomMoveSfx();
 				// add force
 				iTween.MoveBy(gameObject, iTween.Hash("z", 2, "time", 0.35));
 			}
 			if(Input.GetButton("Down"))
 			{
+				AudioPlayer.instance.PlayRandomMoveSfx();
 				// add force
 				iTween.MoveBy(gameObject, iTween.Hash("z", -2, "time", 0.35));
 			}
