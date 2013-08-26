@@ -51,6 +51,7 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400008}
   - 65: {fileID: 6500000}
+  - 114: {fileID: 11400014}
   m_Layer: 2
   m_Name: Cat
   m_TagString: Untagged
@@ -952,7 +953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostTrickSlowTimeScale: .200000003
   ghostTrickActiveDuration: .200000003
-  numberOfGhostTrickUsed: 10
   distanceClick: 300
   dragGesture_effectiveDistance: 200
   factorDraggedDistance: 2.29999995
@@ -979,8 +979,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cat: {fileID: 5400000}
-  xAxisForce: 100
-  zAxisForce: 100
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1029,6 +1027,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 10
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e023ac97f40cd4d87b6242c736627f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

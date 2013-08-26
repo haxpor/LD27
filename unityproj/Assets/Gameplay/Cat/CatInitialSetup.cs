@@ -7,5 +7,6 @@ public class CatInitialSetup : MonoBehaviour {
 	}
 	
 	void Start() {
+		gameObject.transform.FindChild("Nien").animation["Freefalling"].speed = 10.0f;
 	}
 }
