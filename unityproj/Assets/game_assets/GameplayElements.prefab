@@ -955,6 +955,7 @@ MonoBehaviour:
   numberOfGhostTrickUsed: 10
   distanceClick: 300
   dragGesture_effectiveDistance: 200
+  factorDraggedDistance: 2.29999995
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -966,7 +967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00beeda238d147a3bea9a00c44f2cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cat: {fileID: 2300002}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -48,6 +48,10 @@ MonoBehaviour:
     Count: 50
     pool: []
     objectsInPool: 0
+  - Prefab: {fileID: 100000, guid: d3f5ca7881b9b4fa8aee173787b06d23, type: 2}
+    Count: 50
+    pool: []
+    objectsInPool: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -64,9 +68,9 @@ MonoBehaviour:
   - {fileID: 100000, guid: f9fa8d71ae280ee48acd6a8aceb95647, type: 2}
   - {fileID: 100000, guid: d3f5ca7881b9b4fa8aee173787b06d23, type: 2}
   ObstacleSpawnPercentages:
-  - .100000001
-  - .200000003
-  - .699999988
+  - 1
+  - 1
+  - 1
   spawnDistanceMin: 1
   spawnDistanceMax: 5
   spawnDistanceReducer: 1

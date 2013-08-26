@@ -21,25 +21,28 @@ public class MovementControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButton("Left"))
+		if(CountDownTimer.instance.GetTimeRemaining() > 0.0f)
 		{
-			// add force
-			cat.AddForce(new Vector3(-1.0f, 0.0f, 0.0f) * xAxisForce, ForceMode.Acceleration);
-		}
-		if(Input.GetButton("Right"))
-		{
-			// add force
-			cat.AddForce(new Vector3(1.0f, 0.0f, 0.0f) * xAxisForce, ForceMode.Acceleration);
-		}
-		if(Input.GetButton("Up"))
-		{
-			// add force
-			cat.AddForce(new Vector3(0.0f, 0.0f, 1.0f) * zAxisForce, ForceMode.Acceleration);
-		}
-		if(Input.GetButton("Down"))
-		{
-			// add force
-			cat.AddForce(new Vector3(0.0f, 0.0f, -1.0f) * zAxisForce, ForceMode.Acceleration);
+			if(Input.GetButton("Left"))
+			{
+				// add force
+				cat.AddForce(new Vector3(-1.0f, 0.0f, 0.0f) * xAxisForce, ForceMode.Acceleration);
+			}
+			if(Input.GetButton("Right"))
+			{
+				// add force
+				cat.AddForce(new Vector3(1.0f, 0.0f, 0.0f) * xAxisForce, ForceMode.Acceleration);
+			}
+			if(Input.GetButton("Up"))
+			{
+				// add force
+				cat.AddForce(new Vector3(0.0f, 0.0f, 1.0f) * zAxisForce, ForceMode.Acceleration);
+			}
+			if(Input.GetButton("Down"))
+			{
+				// add force
+				cat.AddForce(new Vector3(0.0f, 0.0f, -1.0f) * zAxisForce, ForceMode.Acceleration);
+			}
 		}
 	}
 }

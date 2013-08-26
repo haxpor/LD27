@@ -18,7 +18,7 @@ public class TriggerTouchTheGround : MonoBehaviour {
 		isCatTouchedTheGround = true;
 		
 		// play the cat's animation "YAY"
-		nien.animation.Play("Section_Complete");
+		nien.animation.CrossFade("Section_Complete");
 	}
 	
 	// Get weather the cat touched the ground already
