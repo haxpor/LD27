@@ -8,7 +8,11 @@ public class TriggerTouchTheGround : MonoBehaviour {
 	private bool isCatTouchedTheGround = false;
 
 	void OnTriggerEnter(Collider other){
-		plane.renderer.material.color = Color.red;
+		
+		if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f)
+			plane.renderer.material.color = Color.red;
+		else
+			plane.renderer.material.color = Color.green;
 		
 		// set cat touched the ground
 		isCatTouchedTheGround = true;

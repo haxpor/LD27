@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9884b673dc4124d6e80a09dc29a6dae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cat: {fileID: 5400000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
-  levelManager: {fileID: 100000, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+  cat: {fileID: 0}
+  levelManager: {fileID: 0}
   boundaryBouncingBackForce: 500
 --- !u!114 &11400004
 MonoBehaviour:
@@ -196,9 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907d1ef0f396c4f2b9c5497c2463bfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cat: {fileID: 2300002, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
-  triggerTouchTheGround: {fileID: 100008, guid: bf82ec34fa4b14fd3bb977485cff6da9,
-    type: 2}
+  cat: {fileID: 0}
+  triggerTouchTheGround: {fileID: 0}
   gameLosePrefab: {fileID: 400000, guid: 5c04cdda4f2a30443909614813877665, type: 2}
   gameWinPrefab: {fileID: 400002, guid: e5cba655d85aea3459adaf21ded55e0b, type: 2}
 --- !u!1001 &100100000

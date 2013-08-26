@@ -62,16 +62,18 @@ MonoBehaviour:
   ObstaclePrefabs:
   - {fileID: 100006, guid: 5468773e85a226746b020e8a2324ff09, type: 2}
   - {fileID: 100000, guid: f9fa8d71ae280ee48acd6a8aceb95647, type: 2}
+  - {fileID: 100000, guid: d3f5ca7881b9b4fa8aee173787b06d23, type: 2}
   ObstacleSpawnPercentages:
-  - .300000012
+  - .100000001
+  - .200000003
   - .699999988
-  spawnDistanceMin: 20
-  spawnDistanceMax: 30
+  spawnDistanceMin: 1
+  spawnDistanceMax: 5
   spawnDistanceReducer: 1
-  spawnFinalMin: 10
+  spawnFinalMin: 1
   spawnFinalMax: 20
-  spawnHalfWidth: 30
-  spawnHalfHeight: 30
+  spawnHalfWidth: 50
+  spawnHalfHeight: 20
   levelDistance: 490
 --- !u!1001 &100100000
 Prefab:
