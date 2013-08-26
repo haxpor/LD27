@@ -74,7 +74,7 @@ public class ObstacleManager : MonoBehaviour {
 		GameObject obstacleGob = ObjectPool.instance.GetObjectForType(ObstaclePrefabs[index].name, true);
 		if(obstacleGob)
 		{
-			Debug.Log("spawned obstacle at "+y);
+			//Debug.Log("spawned obstacle at "+y);
 			
 			obstacleGob.BroadcastMessage("ObstacleSpawned", null, SendMessageOptions.DontRequireReceiver);
 			//obstacleGob.transform.localRotation = Quaternion.identity;

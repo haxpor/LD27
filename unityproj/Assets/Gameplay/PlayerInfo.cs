@@ -5,6 +5,7 @@ public class PlayerInfo : MonoBehaviour {
 	public int numberOfMaximumGhostTrick = 10;	// don't edit this value
 	public int numberOfGhostTrickUsed = 10;
 	public bool isHitByObstacles = false;
+	public int currentWorldNumber = 1;
 	
 	public static PlayerInfo instance { get; private set; }
 

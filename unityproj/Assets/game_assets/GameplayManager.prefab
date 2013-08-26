@@ -14,6 +14,8 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400008}
+  - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: GameplayManager
   m_TagString: Untagged
@@ -197,8 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907d1ef0f396c4f2b9c5497c2463bfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cat: {fileID: 0}
-  triggerTouchTheGround: {fileID: 0}
+  cat: {fileID: 2300002, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
+  triggerTouchTheGround: {fileID: 100008, guid: bf82ec34fa4b14fd3bb977485cff6da9,
+    type: 2}
   gameLosePrefab: {fileID: 400000, guid: 5c04cdda4f2a30443909614813877665, type: 2}
   gameWinPrefab: {fileID: 400002, guid: e5cba655d85aea3459adaf21ded55e0b, type: 2}
 --- !u!114 &11400008
@@ -215,6 +218,29 @@ MonoBehaviour:
   numberOfMaximumGhostTrick: 3
   numberOfGhostTrickUsed: 3
   isHitByObstacles: 0
+  currentWorldNumber: 1
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49bab274a6cd46c98c3a1e97a2bc416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afa970ede01a4a22b188c72dd35816c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

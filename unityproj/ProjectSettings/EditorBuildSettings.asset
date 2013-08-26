@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/scenes/scene_title.unity
   - enabled: 1
     path: Assets/scenes/scene_game_world1.unity
+  - enabled: 1
+    path: Assets/scenes/scene_game_world2.unity
