@@ -28,6 +28,7 @@ public class GhostTrick : MonoBehaviour {
 			{
 				PlayerInfo.instance.numberOfGhostTrickUsed--;
 				isGhostTrickActivated = true;
+				AudioPlayer.instance.PlayGhostTrickStartSfx();
 				
 	            Time.timeScale = ghostTrickSlowTimeScale;
 	            // If you lower timeScale it is recommended to also lower Time.fixedDeltaTime by the same amount.
@@ -53,6 +54,8 @@ public class GhostTrick : MonoBehaviour {
 						{
 							if(hit.collider.gameObject.tag == "Obstacles")
 							{
+								AudioPlayer.instance.PlayGhostTrickDragSfx();
+								
 								if(hit.collider.gameObject.renderer != null)
 								{
 									hit.collider.gameObject.renderer.material.color = Color.red;
@@ -102,7 +105,7 @@ public class GhostTrick : MonoBehaviour {
 				// if reach the active duration then go back to normal
 				if(ghostTrickCountingTimeActiveDuration >= ghostTrickActiveDuration)
 				{
-					Debug.Log ("entered");
+					AudioPlayer.instance.PlayGhostTrickEndSfx();
 					
 					// reset states
 					isGhostTrickActivated = false;
