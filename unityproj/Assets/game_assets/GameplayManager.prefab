@@ -212,8 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a68e778a77e0491d9c069b5529a3ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfMaximumGhostTrick: 10
-  numberOfGhostTrickUsed: 10
+  numberOfMaximumGhostTrick: 3
+  numberOfGhostTrickUsed: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

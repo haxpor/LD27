@@ -21,7 +21,7 @@ public class GameOverChecker : MonoBehaviour {
 		if(!isGameOverStateReached)
 		{
 			// GAMEOVER: less than 10 secs, and not touch the ground yet
-			if(CountDownTimer.instance.GetTimeRemaining() < 0.0f && !refTriggerTouchTheGround.GetIsCatTouchedTheGround())
+			if(CountDownTimer.instance.GetTimeRemaining() < 0.0f)
 			{
 				Debug.Log ("Game Over!!");
 				cat.material.color = Color.yellow;
