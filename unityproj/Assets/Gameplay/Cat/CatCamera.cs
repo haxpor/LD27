@@ -14,6 +14,6 @@ public class CatCamera : MonoBehaviour {
 		// lerp individual position
 		// y
 		float y = Mathf.Lerp(camera.position.y + 15, transform.position.y, 0.65f);
-		camera.position = new Vector3(camera.position.x, y, transform.position.z);;
+		camera.position = new Vector3(camera.position.x, y, 0.0f);
 	}
 }

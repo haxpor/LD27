@@ -26,22 +26,22 @@ public class MovementControl : MonoBehaviour {
 			if(Input.GetButton("Left"))
 			{
 				// add force
-				cat.AddForce(new Vector3(-1.0f, 0.0f, 0.0f) * xAxisForce, ForceMode.Acceleration);
+				iTween.MoveBy(gameObject, iTween.Hash("x", -2, "time", 0.35));
 			}
 			if(Input.GetButton("Right"))
 			{
 				// add force
-				cat.AddForce(new Vector3(1.0f, 0.0f, 0.0f) * xAxisForce, ForceMode.Acceleration);
+				iTween.MoveBy(gameObject, iTween.Hash("x", 2, "time", 0.35));
 			}
 			if(Input.GetButton("Up"))
 			{
 				// add force
-				cat.AddForce(new Vector3(0.0f, 0.0f, 1.0f) * zAxisForce, ForceMode.Acceleration);
+				iTween.MoveBy(gameObject, iTween.Hash("z", 2, "time", 0.35));
 			}
 			if(Input.GetButton("Down"))
 			{
 				// add force
-				cat.AddForce(new Vector3(0.0f, 0.0f, -1.0f) * zAxisForce, ForceMode.Acceleration);
+				iTween.MoveBy(gameObject, iTween.Hash("z", -2, "time", 0.35));
 			}
 		}
 	}
