@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: GameplayManager
   m_TagString: Untagged
@@ -200,6 +201,19 @@ MonoBehaviour:
   triggerTouchTheGround: {fileID: 0}
   gameLosePrefab: {fileID: 400000, guid: 5c04cdda4f2a30443909614813877665, type: 2}
   gameWinPrefab: {fileID: 400002, guid: e5cba655d85aea3459adaf21ded55e0b, type: 2}
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a68e778a77e0491d9c069b5529a3ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMaximumGhostTrick: 10
+  numberOfGhostTrickUsed: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -4,7 +4,6 @@ using System.Collections;
 public class GhostTrick : MonoBehaviour {
 	public float ghostTrickSlowTimeScale = 0.2f;
 	public float ghostTrickActiveDuration = 0.6f;	// in secs
-	public int numberOfGhostTrickUsed = 10;
 	
 	private float ghostTrickCountingTimeActiveDuration = 0.0f;
 	private bool isGhostTrickActivated = false;
@@ -25,9 +24,9 @@ public class GhostTrick : MonoBehaviour {
 	void Update () {
 		if(CountDownTimer.instance.GetTimeRemaining() > 0.0f)
 		{
-			if(Input.GetButtonDown("GhostTrick") && !isGhostTrickActivated && numberOfGhostTrickUsed > 0)
+			if(Input.GetButtonDown("GhostTrick") && !isGhostTrickActivated && PlayerInfo.instance.numberOfGhostTrickUsed > 0)
 			{
-				numberOfGhostTrickUsed--;
+				PlayerInfo.instance.numberOfGhostTrickUsed--;
 				isGhostTrickActivated = true;
 				
 	            Time.timeScale = ghostTrickSlowTimeScale;
