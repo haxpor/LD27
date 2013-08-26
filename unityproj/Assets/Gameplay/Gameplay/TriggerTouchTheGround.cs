@@ -9,16 +9,17 @@ public class TriggerTouchTheGround : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		
-		if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f)
+		if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f || PlayerInfo.instance.isHitByObstacles)
 			plane.renderer.material.color = Color.red;
-		else
+		else if(!PlayerInfo.instance.isHitByObstacles)
 			plane.renderer.material.color = Color.green;
 		
 		// set cat touched the ground
 		isCatTouchedTheGround = true;
 		
 		// play the cat's animation "YAY"
-		nien.animation.CrossFade("Section_Complete");
+		if(!PlayerInfo.instance.isHitByObstacles)
+			nien.animation.CrossFade("Section_Complete");
 	}
 	
 	// Get weather the cat touched the ground already

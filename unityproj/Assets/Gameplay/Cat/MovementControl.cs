@@ -12,9 +12,6 @@ public class MovementControl : MonoBehaviour {
 	
 	public Rigidbody cat;
 	
-	public float xAxisForce = 500.0f;
-	public float zAxisForce = 500.0f;
-
 	// Use this for initialization
 	void Start () {
 	}

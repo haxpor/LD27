@@ -28,8 +28,8 @@ public class ObsAlien : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        currAngle += angularSpeed * Time.deltaTime;
-        Vector3 newPos = new Vector3(radius * Mathf.Cos(currAngle), 0.0f, radius * Mathf.Sin(currAngle));
-        alienTransform.Translate(newPos - alienTransform.localPosition);;
+    	currAngle += angularSpeed * Time.deltaTime;
+    	Vector3 newPos = new Vector3(radius * Mathf.Cos(currAngle), 0.0f, radius * Mathf.Sin(currAngle));
+    	alienTransform.Translate(newPos - alienTransform.localPosition);
 	}
 }

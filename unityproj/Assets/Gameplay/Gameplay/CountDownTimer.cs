@@ -14,9 +14,9 @@ public class CountDownTimer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (timeRemaining > 0.0f)
+        if (timeRemaining > 0.0f && !PlayerInfo.instance.isHitByObstacles)
             timeRemaining -= Time.deltaTime;
-        else
+        else if(!PlayerInfo.instance.isHitByObstacles)
             timeRemaining = 0.0f;
 	}
 	
