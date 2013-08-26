@@ -20,6 +20,8 @@ public class HitEffect : MonoBehaviour {
 		{
 			Debug.Log ("Cat is collided with one of obstacles");
 			
+			AudioPlayer.instance.PlayRandomHurtSfx();
+			
 			// set hit flag
 			PlayerInfo.instance.isHitByObstacles = true;
 			

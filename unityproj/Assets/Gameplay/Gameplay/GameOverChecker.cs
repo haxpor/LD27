@@ -31,6 +31,8 @@ public class GameOverChecker : MonoBehaviour {
 	            Instantiate(gameLosePrefab);
 				
 				isGameOverStateReached = true;
+				
+				AudioPlayer.instance.PlayRandomLoseSfx();
 			}
 			else if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.002f && !PlayerInfo.instance.isHitByObstacles)
 			{
@@ -42,6 +44,8 @@ public class GameOverChecker : MonoBehaviour {
 	            Instantiate(gameWinPrefab);
 				
 				isGameOverStateReached = true;
+				
+				AudioPlayer.instance.PlayRandomWinSfx();
 			}
 		}
 	}
