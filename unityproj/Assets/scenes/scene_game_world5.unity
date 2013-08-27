@@ -2315,7 +2315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5afa970ede01a4a22b188c72dd35816c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalNumberOfWorld: 5
+  totalNumberOfWorld: 6
 --- !u!114 &883484735
 MonoBehaviour:
   m_ObjectHideFlags: 0
