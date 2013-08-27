@@ -177,6 +177,14 @@ Prefab:
       propertyPath: currentWorldNumber
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: c6c7acd97d43b4e4a8221ad3a7fb672a, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cf3165a4275b84218b662fa036790787, type: 3}
+    - target: {fileID: 11400000, guid: c6c7acd97d43b4e4a8221ad3a7fb672a, type: 2}
+      propertyPath: worldBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: cf3165a4275b84218b662fa036790787, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6c7acd97d43b4e4a8221ad3a7fb672a, type: 2}
   m_RootGameObject: {fileID: 1463137957}
@@ -1349,7 +1357,7 @@ AudioSource:
   m_GameObject: {fileID: 1463137957}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: b60e4af4c98ea4a4b87250d381845eeb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cf3165a4275b84218b662fa036790787, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1411,7 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76eff562dcdb141e1902311491cfa3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldBGM: {fileID: 8300000, guid: b60e4af4c98ea4a4b87250d381845eeb, type: 3}
+  worldBGM: {fileID: 8300000, guid: cf3165a4275b84218b662fa036790787, type: 3}
 --- !u!4 &1463137966
 Transform:
   m_ObjectHideFlags: 0

@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5afa970ede01a4a22b188c72dd35816c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalNumberOfWorld: 3
+  totalNumberOfWorld: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
