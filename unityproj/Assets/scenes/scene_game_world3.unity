@@ -177,6 +177,10 @@ Prefab:
       propertyPath: currentWorldNumber
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c6c7acd97d43b4e4a8221ad3a7fb672a, type: 2}
+      propertyPath: worldBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: cf3165a4275b84218b662fa036790787, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6c7acd97d43b4e4a8221ad3a7fb672a, type: 2}
   m_RootGameObject: {fileID: 1463137957}
@@ -1061,6 +1065,22 @@ Prefab:
       propertyPath: ObstacleSpawnPercentages.Array.data[2]
       value: .150000006
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnDistanceMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnFinalMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnHalfWidth
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
+      propertyPath: spawnHalfHeight
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
   m_RootGameObject: {fileID: 1364813739}
@@ -1155,12 +1175,12 @@ MonoBehaviour:
   - .349999994
   - .150000006
   spawnDistanceMin: 1
-  spawnDistanceMax: 5
+  spawnDistanceMax: 30
   spawnDistanceReducer: 1
   spawnFinalMin: 1
-  spawnFinalMax: 20
-  spawnHalfWidth: 50
-  spawnHalfHeight: 20
+  spawnFinalMax: 5
+  spawnHalfWidth: 75
+  spawnHalfHeight: 75
   levelDistance: 490
 --- !u!4 &1364813742
 Transform:
@@ -1411,7 +1431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76eff562dcdb141e1902311491cfa3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldBGM: {fileID: 8300000, guid: b60e4af4c98ea4a4b87250d381845eeb, type: 3}
+  worldBGM: {fileID: 8300000, guid: cf3165a4275b84218b662fa036790787, type: 3}
 --- !u!4 &1463137966
 Transform:
   m_ObjectHideFlags: 0
@@ -1573,6 +1593,10 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1941513363}
+    - target: {fileID: 2300000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f137a9fa10d3148d48540ab876b54874, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
   m_RootGameObject: {fileID: 688552417}
@@ -1723,6 +1747,7 @@ GameObject:
   - 33: {fileID: 1983554425}
   - 64: {fileID: 1983554424}
   - 23: {fileID: 1983554423}
+  - 45: {fileID: 1983554426}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1754,7 +1779,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f137a9fa10d3148d48540ab876b54874, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1782,6 +1807,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1732759055}
   m_GameObject: {fileID: 1983554421}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!45 &1983554426
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4500000, guid: bf82ec34fa4b14fd3bb977485cff6da9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1732759055}
+  m_GameObject: {fileID: 1983554421}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: f137a9fa10d3148d48540ab876b54874, type: 2}
 --- !u!1 &2051831225
 GameObject:
   m_ObjectHideFlags: 0

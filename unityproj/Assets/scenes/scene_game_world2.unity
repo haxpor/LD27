@@ -606,6 +606,7 @@ GameObject:
   - 33: {fileID: 378442428}
   - 64: {fileID: 378442427}
   - 23: {fileID: 378442426}
+  - 45: {fileID: 378442429}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -637,7 +638,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ec3930d160aa4b258faf316e4242e0e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -665,6 +666,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2036012428}
   m_GameObject: {fileID: 378442424}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!45 &378442429
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4500000, guid: bf82ec34fa4b14fd3bb977485cff6da9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2036012428}
+  m_GameObject: {fileID: 378442424}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: f137a9fa10d3148d48540ab876b54874, type: 2}
 --- !u!1 &432650701
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,6 +3133,10 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1671972695}
+    - target: {fileID: 2300000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ec3930d160aa4b258faf316e4242e0e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
   m_RootGameObject: {fileID: 1751476419}
