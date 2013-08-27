@@ -844,6 +844,10 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 266613977}
+    - target: {fileID: 2300000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a79470fd698144912ac86e39ef4e0b87, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf82ec34fa4b14fd3bb977485cff6da9, type: 2}
   m_RootGameObject: {fileID: 198541619}
@@ -2376,7 +2380,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a79470fd698144912ac86e39ef4e0b87, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
