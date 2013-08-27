@@ -11,6 +11,7 @@ public class AudioPlayer : MonoBehaviour {
 	public AudioClip ghostTrickStart_sfx;
 	public AudioClip ghostTrickEnd_sfx;
 	public AudioClip[] move_sfx;
+	public AudioClip[] start_sfx;
 	
 	public static AudioPlayer instance { get; private set; }
 	
@@ -53,5 +54,9 @@ public class AudioPlayer : MonoBehaviour {
 	
 	public void PlayRandomMoveSfx() {
 		audio.PlayOneShot(move_sfx[Random.Range (0, move_sfx.Length)]);
+	}
+	
+	public void PlayRandomStartSfx() {
+		audio.PlayOneShot(start_sfx[Random.Range(0, start_sfx.Length)]);
 	}
 }

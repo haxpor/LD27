@@ -1363,6 +1363,9 @@ MonoBehaviour:
   move_sfx:
   - {fileID: 8300000, guid: 81d2a631a2e564e628eb4217bffcc5c1, type: 3}
   - {fileID: 8300000, guid: 14c1b242f5aa84adeaaac8a5550e1929, type: 3}
+  start_sfx:
+  - {fileID: 8300000, guid: 44e20c41a946f4d8f89d56de683e40fe, type: 3}
+  - {fileID: 8300000, guid: 62c5d2bf2a6b4403994dae7ba6f063c6, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

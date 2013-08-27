@@ -22,6 +22,8 @@ public class StartButton : MonoBehaviour {
 				customButtonStyle.normal.background.width, customButtonStyle.normal.background.height),
 			"", customButtonStyle)) {
 		//if(GUILayout.Button(customButtonStyle.normal.background)) {
+			
+			AudioPlayer.instance.PlayRandomStartSfx();
 			Application.LoadLevel(1);
 		}
 	}
@@ -33,6 +35,5 @@ public class StartButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 }
