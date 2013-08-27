@@ -52,13 +52,13 @@ public class GUIGameWin : MonoBehaviour {
 
         float y = Screen.height / 2 + 70;
         if (Application.loadedLevel < Application.levelCount-1 &&
-            GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "Next Level", nextLevelStyle))
+            GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "", nextLevelStyle))
         {
             Application.LoadLevel(Application.loadedLevel + 1);
         }
 
         y+= 50 + 5;
-        if( GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "Title", titleStyle))
+        if( GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "", titleStyle))
         {
             Application.LoadLevel(0);
         }
