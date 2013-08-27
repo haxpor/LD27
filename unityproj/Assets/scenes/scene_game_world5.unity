@@ -222,10 +222,10 @@ MonoBehaviour:
   - {fileID: 100002, guid: 8b9cb91beb5ae496f8aed69fe7d6c464, type: 2}
   - {fileID: 100036, guid: 70aaa2772039b4675b8e129da25d19dd, type: 2}
   ObstacleSpawnPercentages:
-  - .400000006
+  - .150000006
   - .600000024
-  spawnDistanceMin: 2
-  spawnDistanceMax: 5
+  spawnDistanceMin: 4
+  spawnDistanceMax: 7
   spawnDistanceReducer: 1
   spawnFinalMin: 1
   spawnFinalMax: 20
@@ -326,7 +326,7 @@ Prefab:
       objectReference: {fileID: 100002, guid: 8b9cb91beb5ae496f8aed69fe7d6c464, type: 2}
     - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
       propertyPath: ObstacleSpawnPercentages.Array.data[0]
-      value: .400000006
+      value: .150000006
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
       propertyPath: ObstaclePrefabs.Array.data[1]
@@ -342,11 +342,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
       propertyPath: spawnDistanceMin
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
       propertyPath: spawnDistanceMax
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68feb24cac673154fa7e61c12d3fc71e, type: 2}
