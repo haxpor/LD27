@@ -10,12 +10,12 @@ public class TriggerTouchTheGround : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		
-		if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.002f && PlayerInfo.instance.isHitByObstacles)
+		if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.004f && PlayerInfo.instance.isHitByObstacles)
 		{
 			plane.renderer.material.color = Color.red;
 			Debug.Log ("Changed plain's color to red");
 		}
-		else if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.002f && !PlayerInfo.instance.isHitByObstacles)
+		else if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.004f && !PlayerInfo.instance.isHitByObstacles)
 		{
 			plane.renderer.material.color = Color.green;
 			Debug.Log ("Changed plain's color to green");
@@ -32,7 +32,10 @@ public class TriggerTouchTheGround : MonoBehaviour {
 			
 			// increase the current number of world
 			if(PlayerInfo.instance.currentWorldNumber < GameInfo.instance.totalNumberOfWorld)
+			{
+				Debug.Log("Increased number of world");
 				PlayerInfo.instance.currentWorldNumber++;
+			}
 			else
 			{
 				isAllWorldsCompleted = true;
@@ -53,7 +56,10 @@ public class TriggerTouchTheGround : MonoBehaviour {
 			if(isAllWorldsCompleted)
 				Application.LoadLevel(0);
 			else
+			{
 				Application.LoadLevel(PlayerInfo.instance.currentWorldNumber);	// see the number of scene in Build Setting
+				Debug.Log("Load next level");
+			}
 		}
 	}
 }

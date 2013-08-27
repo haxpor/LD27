@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameInfo : MonoBehaviour {
 	
-	public int totalNumberOfWorld = 2;
+	public int totalNumberOfWorld;
 	
 	public static GameInfo instance { get; private set; }
 

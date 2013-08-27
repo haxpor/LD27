@@ -21,10 +21,10 @@ public class GameOverChecker : MonoBehaviour {
 		if(!isGameOverStateReached)
 		{
 			// GAMEOVER: less than 10 secs, and not touch the ground yet
-			if((CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.002f && PlayerInfo.instance.isHitByObstacles) || PlayerInfo.instance.isHitByObstacles)
+			if((CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.004f && PlayerInfo.instance.isHitByObstacles) || PlayerInfo.instance.isHitByObstacles)
 			{
 				Debug.Log ("Game Over!!");
-				cat.material.color = Color.yellow;
+				//cat.material.color = Color.yellow;
 				
 				// Send message for GAMEOVER
 	            //gameObject.BroadcastMessage("onGameOver", SendMessageOptions.RequireReceiver);
@@ -34,10 +34,10 @@ public class GameOverChecker : MonoBehaviour {
 				
 				AudioPlayer.instance.PlayRandomLoseSfx();
 			}
-			else if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.002f && !PlayerInfo.instance.isHitByObstacles)
+			else if((CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.004f && !PlayerInfo.instance.isHitByObstacles))
 			{
 				Debug.Log ("Win!!");
-				cat.material.color = Color.green;
+				//cat.material.color = Color.green;
 				
 				// Send message for WINNING 
 	            //gameObject.BroadcastMessage("onWin", SendMessageOptions.RequireReceiver);
