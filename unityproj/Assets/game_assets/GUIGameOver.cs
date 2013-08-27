@@ -32,13 +32,13 @@ public class GUIGameOver : MonoBehaviour {
     void OnGUI()
     {
         float y = Screen.height / 2 + 70;
-        if (GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "Retry Level", retryLevelStyle))
+        if (GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "", retryLevelStyle))
         {
             Application.LoadLevel(Application.loadedLevel);
         }
 
         y += 50 + 5;
-        if (GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "Title", titleStyle))
+        if (GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "", titleStyle))
         {
             Application.LoadLevel(0);
         }
