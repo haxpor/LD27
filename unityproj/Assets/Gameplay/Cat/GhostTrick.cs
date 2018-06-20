@@ -56,9 +56,9 @@ public class GhostTrick : MonoBehaviour {
 							{
 								AudioPlayer.instance.PlayGhostTrickDragSfx();
 								
-								if(hit.collider.gameObject.renderer != null)
+								if(hit.collider.gameObject.GetComponent<Renderer>() != null)
 								{
-									hit.collider.gameObject.renderer.material.color = Color.red;
+									hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
 								}
 								
 								// save target obstacles in dragging
@@ -84,8 +84,8 @@ public class GhostTrick : MonoBehaviour {
 						if(targetObstaclesInDragged != null &&
 						   distance >= dragGesture_effectiveDistance)
 						{
-							if(targetObstaclesInDragged.renderer != null)
-								targetObstaclesInDragged.renderer.material.color = Color.green;
+							if(targetObstaclesInDragged.GetComponent<Renderer>() != null)
+								targetObstaclesInDragged.GetComponent<Renderer>().material.color = Color.green;
 							Debug.Log ("Dragged and reached effective range");
 							
 							// check direction to drag

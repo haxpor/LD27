@@ -21,42 +21,42 @@ public class AudioPlayer : MonoBehaviour {
 	}
 
 	public void PlayRandomHurtSfx() {
-		audio.PlayOneShot(hurt_sfx[Random.Range(0, hurt_sfx.Length)]);
+		GetComponent<AudioSource>().PlayOneShot(hurt_sfx[Random.Range(0, hurt_sfx.Length)]);
 	}
 	
 	public void PlayRandomLoseSfx() {
-		audio.PlayOneShot(lose_sfx[Random.Range(0, lose_sfx.Length)]);
+		GetComponent<AudioSource>().PlayOneShot(lose_sfx[Random.Range(0, lose_sfx.Length)]);
 	}
 	
 	public void PlayRandomWinSfx() {
-		audio.PlayOneShot(win_sfx[Random.Range(0, win_sfx.Length)]);
+		GetComponent<AudioSource>().PlayOneShot(win_sfx[Random.Range(0, win_sfx.Length)]);
 	}
 	
 	public void PlayRandomTransitionSfx() {
-		audio.PlayOneShot(transition_sfx[Random.Range (0, transition_sfx.Length)]);
+		GetComponent<AudioSource>().PlayOneShot(transition_sfx[Random.Range (0, transition_sfx.Length)]);
 	}
 	
 	public void PlayGhostTrickStartSfx() {
-		audio.pitch = 0.9f;
-		audio.PlayOneShot(ghostTrickStart_sfx);
-		audio.pitch = 1.0f;
+		GetComponent<AudioSource>().pitch = 0.9f;
+		GetComponent<AudioSource>().PlayOneShot(ghostTrickStart_sfx);
+		GetComponent<AudioSource>().pitch = 1.0f;
 	}
 	
 	public void PlayGhostTrickEndSfx() {
-		audio.PlayOneShot(ghostTrickEnd_sfx);
+		GetComponent<AudioSource>().PlayOneShot(ghostTrickEnd_sfx);
 	}
 	
 	public void PlayGhostTrickDragSfx() {
-		audio.pitch = 0.9f;
-		audio.PlayOneShot(ghostTrickDrag_sfx);
-		audio.pitch = 1.0f;
+		GetComponent<AudioSource>().pitch = 0.9f;
+		GetComponent<AudioSource>().PlayOneShot(ghostTrickDrag_sfx);
+		GetComponent<AudioSource>().pitch = 1.0f;
 	}
 	
 	public void PlayRandomMoveSfx() {
-		audio.PlayOneShot(move_sfx[Random.Range (0, move_sfx.Length)]);
+		GetComponent<AudioSource>().PlayOneShot(move_sfx[Random.Range (0, move_sfx.Length)]);
 	}
 	
 	public void PlayRandomStartSfx() {
-		audio.PlayOneShot(start_sfx[Random.Range(0, start_sfx.Length)]);
+		GetComponent<AudioSource>().PlayOneShot(start_sfx[Random.Range(0, start_sfx.Length)]);
 	}
 }

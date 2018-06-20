@@ -12,12 +12,12 @@ public class TriggerTouchTheGround : MonoBehaviour {
 		
 		if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.004f && PlayerInfo.instance.isHitByObstacles)
 		{
-			plane.renderer.material.color = Color.red;
+			plane.GetComponent<Renderer>().material.color = Color.red;
 			Debug.Log ("Changed plain's color to red");
 		}
 		else if(CountDownTimer.instance.GetTimeRemaining() <= 0.0f + 0.004f && !PlayerInfo.instance.isHitByObstacles)
 		{
-			plane.renderer.material.color = Color.green;
+			plane.GetComponent<Renderer>().material.color = Color.green;
 			Debug.Log ("Changed plain's color to green");
 		}
 		
@@ -27,8 +27,8 @@ public class TriggerTouchTheGround : MonoBehaviour {
 		// play the cat's animation "YAY"
 		if(!PlayerInfo.instance.isHitByObstacles)
 		{
-			nien.animation.CrossFade("Section_Complete");
-			nien.animation.CrossFadeQueued("Idle");
+			nien.GetComponent<Animation>().CrossFade("Section_Complete");
+			nien.GetComponent<Animation>().CrossFadeQueued("Idle");
 			
 			// increase the current number of world
 			if(PlayerInfo.instance.currentWorldNumber < GameInfo.instance.totalNumberOfWorld)
@@ -51,15 +51,17 @@ public class TriggerTouchTheGround : MonoBehaviour {
 	
 	void Update() {
 		// if finish playing "Section_Complete" animation
-		if(!PlayerInfo.instance.isHitByObstacles && nien.animation.IsPlaying("Idle"))
+		if(!PlayerInfo.instance.isHitByObstacles && nien.GetComponent<Animation>().IsPlaying("Idle"))
 		{
-			if(isAllWorldsCompleted)
-				Application.LoadLevel(0);
-			else
-			{
-				Application.LoadLevel(PlayerInfo.instance.currentWorldNumber);	// see the number of scene in Build Setting
-				Debug.Log("Load next level");
-			}
+			// if(isAllWorldsCompleted)
+			// {
+				//Application.LoadLevel(0);
+			// }
+			// else
+			// {
+			// 	Application.LoadLevel(PlayerInfo.instance.currentWorldNumber);	// see the number of scene in Build Setting
+			// 	Debug.Log("Load next level");
+			// }
 		}
 	}
 }

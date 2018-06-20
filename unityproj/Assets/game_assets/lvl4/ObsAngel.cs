@@ -9,7 +9,7 @@ public class ObsAngel : MonoBehaviour {
 	void Start () {
 		// initial random the rotation abit to make it looks different
 		gameObject.transform.rotation = Quaternion.Euler(-90, rotationRandom[Random.Range(0,4)], gameObject.transform.rotation.z);
-		gameObject.collider.transform.rotation = gameObject.transform.rotation;
+		gameObject.GetComponent<Collider>().transform.rotation = gameObject.transform.rotation;
 	}
 	
 	// Update is called once per frame

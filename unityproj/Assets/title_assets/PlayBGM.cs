@@ -7,8 +7,8 @@ public class PlayBGM : MonoBehaviour {
 	
 	void Start () {
 		// play loop audio
-		audio.clip = titleBGM;
-		audio.loop = true;
-		audio.Play();
+		GetComponent<AudioSource>().clip = titleBGM;
+		GetComponent<AudioSource>().loop = true;
+		GetComponent<AudioSource>().Play();
 	}
 }
