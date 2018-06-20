@@ -13,10 +13,10 @@ public class ObsAlien : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        alienTransform = gameObject.transform.FindChild("Alien");
+        alienTransform = gameObject.transform.Find("Alien");
 
         // rotate ufo locally
-        Transform t = alienTransform.FindChild("ufo").transform;
+        Transform t = alienTransform.Find("ufo").transform;
         t.Rotate(new Vector3(0,0,1), Random.Range(0.0f, 360.0f));
         t.Rotate(new Vector3(1, 0, 0), Random.Range(0.0f, 10.0f));
 

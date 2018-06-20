@@ -11,8 +11,8 @@ public class WorldManager : MonoBehaviour {
 		Time.fixedDeltaTime = 0.02f;
 			
 		// play loop audio
-		audio.clip = worldBGM;
-		audio.loop = true;
-		audio.Play();
+		GetComponent<AudioSource>().clip = worldBGM;
+		GetComponent<AudioSource>().loop = true;
+		GetComponent<AudioSource>().Play();
 	}
 }

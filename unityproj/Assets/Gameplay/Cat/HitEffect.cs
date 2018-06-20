@@ -8,7 +8,7 @@ public class HitEffect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		preV = gameObject.rigidbody.velocity.y;
+		preV = gameObject.GetComponent<Rigidbody>().velocity.y;
 	}
 	
 	// Update is called once per frame
@@ -16,13 +16,13 @@ public class HitEffect : MonoBehaviour {
 		// solve the issue of mesh-collider has no easy way to automatic check for collision detection
 		// check when hit with non-mesh collider (as we need to manually check this)
 		//Debug.Log("vel-y: " + gameObject.rigidbody.velocity.y);
-		if(CountDownTimer.instance.GetTimeRemaining() > 0.0f && gameObject.rigidbody.velocity.y > preV && !PlayerInfo.instance.isHitByObstacles)
+		if(CountDownTimer.instance.GetTimeRemaining() > 0.0f && gameObject.GetComponent<Rigidbody>().velocity.y > preV && !PlayerInfo.instance.isHitByObstacles)
 		{
 			Hit();
 		}
 		
 		// update previous velocity-y
-		preV = gameObject.rigidbody.velocity.y;
+		preV = gameObject.GetComponent<Rigidbody>().velocity.y;
 	}
 	
 	// simple collision checker

@@ -11,8 +11,9 @@ public class GUIGameWin : MonoBehaviour {
     public float scaleValPulse;
     public float scaleTimePulse;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
         transform.parent = Camera.main.transform;
         gameObject.transform.localPosition = new Vector3(0, 0, 4);
@@ -26,7 +27,7 @@ public class GUIGameWin : MonoBehaviour {
             "delay", scaleTime1,
             "time", scaleTime2,
             "easeType", "easeOutQuad",
-            "onComplete", "Start2" ));
+            "onComplete", "Start2"));
     }
     void Start2()
     {
@@ -34,11 +35,11 @@ public class GUIGameWin : MonoBehaviour {
             "time", scaleTimePulse,
             "easeType", "easeInOutQuad",
             "loopType", iTween.LoopType.pingPong));
-	}
-	
-	// Update is called once per frame
+    }
+
+    // Update is called once per frame
     //void Update () {
-	
+
     //}
 
 
@@ -51,16 +52,18 @@ public class GUIGameWin : MonoBehaviour {
 
 
         float y = Screen.height / 2 + 70;
-        if (Application.loadedLevel < Application.levelCount-1 &&
+        bool notLastLevel = Application.loadedLevel < Application.levelCount - 1;
+        if (notLastLevel &&
             GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "", nextLevelStyle))
         {
             Application.LoadLevel(Application.loadedLevel + 1);
         }
 
-        y+= 50 + 5;
-        if( GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "", titleStyle))
+        y += 50 + 5;
+        if (GUI.Button(new Rect((Screen.width - 200) / 2, y, 200, 50), "", titleStyle))
         {
             Application.LoadLevel(0);
         }
+
     }
 }

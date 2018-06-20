@@ -145,8 +145,8 @@ public class ObjectPool : MonoBehaviour {
  
             obj.SetActiveRecursively(false); 
             obj.transform.parent = ContainerObject.transform;
-            if (obj.rigidbody != null) {
-                obj.rigidbody.velocity = Vector3.zero;
+            if (obj.GetComponent<Rigidbody>() != null) {
+                obj.GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
                 
             Entries[i].pool[Entries[i].objectsInPool++] = obj;
